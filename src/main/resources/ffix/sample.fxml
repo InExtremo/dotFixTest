@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1535.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ffix.controller.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="1200.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <ScrollPane fx:id="sPane" prefHeight="200.0" prefWidth="200.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="757.0" prefWidth="904.0" />
+            </content>
+        </ScrollPane>
+      <VBox GridPane.columnIndex="1">
+         <children>
+            <Button fx:id="openBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="319.0" text="Open" />
+            <Button mnemonicParsing="false" onAction="#fix" prefHeight="25.0" prefWidth="319.0" text="fix" />
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text=" X correction: " />
+                  <TextField fx:id="tfX" prefHeight="25.0" prefWidth="245.0" text="-23" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text=" Y correction:" />
+                  <TextField fx:id="tfY" prefHeight="25.0" prefWidth="249.0" text="8" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text=" Row radius:" />
+                  <TextField fx:id="tfStep" prefHeight="25.0" prefWidth="255.0" promptText="5-7 prefer" text="5" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text=" Y corrections for bad dot:  " />
+                  <TextField fx:id="tfStep2" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="174.0" promptText="0 is default" text="0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="I know UI from GOD. Sorry)" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</GridPane>
